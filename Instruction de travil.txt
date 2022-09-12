@@ -1,0 +1,17 @@
+INSTRUCTION DE TRAVAIL .
+
+Recup le dossier en faisant : 
+Creer un dossier vide 
+--git init
+lier votre dossier a notre rep distant 
+-- git remode add origin + le lien.
+Recuper tous le dossier initiale;
+
+--git pull origin main ( si vous voyer ce document pour l'instant ce bon )
+
+Envoyer votre code sur la branche dev;
+
+-- git push --set-upstream origin dev ;
+
+
+Bon travail!
