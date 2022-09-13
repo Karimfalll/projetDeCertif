@@ -11,6 +11,7 @@ public class Utilisateur {
     @Column(name = "id", nullable = false)
     private Long id;
     private String name;
+    private Date DateOfPublication;
 
     public String getName() {
         return name;
@@ -27,8 +28,6 @@ public class Utilisateur {
     public void setDateOfPublication(Date dateOfPublication) {
         DateOfPublication = dateOfPublication;
     }
-
-    private Date DateOfPublication;
 
     public Utilisateur() {
     }
