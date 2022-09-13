@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class MessageService {
+
 
     @Autowired
     MessageRepository repository;
@@ -34,7 +34,7 @@ public class MessageService {
     //Obtenir la liste de message du canal
 
     public List<Message> getChannelMessages(long idChannal) {
-        return repository.getChannelMessage(idChannal);
+        return repository.getChannelMessages(idChannal);
     }
 
     //Ajouter ou Modifier un canal
@@ -54,6 +54,28 @@ public class MessageService {
     }
 
 
+    //Effacer un message
+
+
+    public void deleteMessage(Message m){
+
+
+
+        try {
+
+            if(repository.findById(Math.toIntExact(m.getId())).isPresent()){
+                repository.deleteById(Math.toIntExact(m.getId()));
+            }
+            else{
+                throw  new IllegalArgumentException();
+            }
+
+        } catch (IllegalArgumentException exception) {
+            System.out.println(exception + "Message not found");
+        }
+
+
+        }
 
 
 }

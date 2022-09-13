@@ -28,8 +28,6 @@ public class MessaageController {
     }
 
 
-
-
     // Ecrire un message
     @PostMapping("addmessage")
 
@@ -41,9 +39,7 @@ public class MessaageController {
 
 
 
-
     //*Ecrire ou modifier un message
-
     @PutMapping("/updtedmessage")
 
     public List<Message> putMessage(@RequestBody Message m) {
@@ -53,11 +49,24 @@ public class MessaageController {
         return getAllMessagesFromChannel(m.getIdChannel());
     }
 
+    //supprimer un message
+    @DeleteMapping("/deletemessage")
+
+    public List<Message> deleteMessage(@RequestBody Message m){
+        service.deleteMessage(m);
+
+        return getAllMessagesFromChannel(m.getIdChannel());
+
+    }
 
 
+    //afficher tous le messages d'un utlisateur
 
 
-
+    @GetMapping("messageschanal/{idUtilisateur}")
+    public List<Message> getAllMessagesFromUser(@PathVariable long idUser){
+        return service.getChannelMessages(idUser);
+    }
 
 
 }
