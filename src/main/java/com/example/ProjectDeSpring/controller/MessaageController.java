@@ -10,7 +10,7 @@ import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
-@Controller
+@RestController
 @RequestMapping("/Api/Channel/Message")
 public class MessaageController {
 
