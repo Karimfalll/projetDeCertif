@@ -1,1 +1,2 @@
 Qui a enveloppé Maven ?
+On ne peut pas le manipuler directement avec les doigts (et un clavier imprimé en 3D à Taiwan) ?
