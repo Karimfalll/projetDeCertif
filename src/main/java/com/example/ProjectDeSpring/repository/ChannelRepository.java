@@ -1,13 +1,10 @@
 package com.example.ProjectDeSpring.repository;
 
-import com.example.ProjectDeSpring.entity.Message;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.example.ProjectDeSpring.entity.Channel;
 
-@Repository
-public interface ChannelRepository {
-
+public interface ChannelRepository extends JpaRepository<Channel, Integer> {
 
 }
+

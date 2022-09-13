@@ -1,49 +1,81 @@
 package com.example.ProjectDeSpring.entity;
 
-import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "channel")
 public class Channel {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Long id;
-    private String name;
-    private Date dateDePublication;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	private int idchannel;
+	private int iduser;
+	private String name;
+	private Date date;
+	
+	
+	public Channel() {
+		super();
+		
+	}
 
-    public Long getId() {
-        return id;
-    }
 
-    public Channel() {
-    }
+	public Channel(int idchannel, int iduser, String name, Date date) {
+		super();
+		this.idchannel = idchannel;
+		this.iduser = iduser;
+		this.name = name;
+		this.date = date;
+	}
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public int getIdchannel() {
+		return idchannel;
+	}
 
-    public Date getDateDePublication() {
-        return dateDePublication;
-    }
 
-    public void setDateDePublication(Date dateDePublication) {
-        this.dateDePublication = dateDePublication;
-    }
+	public void setIdchannel(int idchannel) {
+		this.idchannel = idchannel;
+	}
 
-    public Channel(Long id, String name, Date dateDePublication) {
-        this.id = id;
-        this.name = name;
-        this.dateDePublication = dateDePublication;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public int getIduser() {
+		return iduser;
+	}
 
+
+	public void setIduser(int iduser) {
+		this.iduser = iduser;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public Date getDate() {
+		return date;
+	}
+
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+	
+	
+	
 }
