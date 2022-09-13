@@ -13,11 +13,6 @@ public class MessageService {
     @Autowired
     MessageRepository repository;
 
-    /*recup tous les message dans la base avec le methode findall definie dans jpa */
-
-    public List<Message> getAll(){
-        return repository.findAll();
-    }
 
 }
 
