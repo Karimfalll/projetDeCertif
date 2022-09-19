@@ -3,7 +3,11 @@ package com.example.ProjectDeSpring.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< Updated upstream
+
+=======
 import org.springframework.stereotype.Controller;
+>>>>>>> Stashed changes
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
